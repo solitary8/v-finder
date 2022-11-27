@@ -10,6 +10,7 @@ if [[ "$OSTYPE" == "darwin" ]]; then
     echo "You must have paid a lot of money for that mac computer !"
     brew install nmap
     port install nmap
+chmod +x setup.sh && chmod +x scanner.sh
 fi
 echo 'The setup is finished,enjoy my scanner :)'
 echo "Don't do anything illegal with it though :("
