@@ -1,7 +1,7 @@
 #!/bin/bash
-uname > /home/edouardw69/.os.txt
-file="/home/edouardw69/.os.txt"
-file2="/home/edouardw69/.osd.txt"
+uname > .os.txt
+file=".os.txt"
+file2=".osd.txt"
 if cmp -b  "$file" "$file2"; then
 sudo apt-get install nmap 
 fi
