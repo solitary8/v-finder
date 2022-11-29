@@ -5,7 +5,7 @@ I thank nmap for making this amazing tool and people on discord who helped me wi
 DISCLAIMER : THIS TOOL IS NOT FOR FINDING VULNERABILITIES IN A SYSTEM THAT IS NOT YOURS,THIS IS ILLEGAL,ONLY HACK DEVICES WHICH YOU OWN OR HAVE PERMISSION TO HACK,I WILL NOT BE HELD RESPONSIBLE IF YOU GET ARRESTED
 Steps for setup : 
 git clone https://github.com/solitary8/port-scanner
-cd port-scanner
+                                cd port-scanner
 chmod +x setup.sh
 ./setup.sh
 usage options (find more info if you type ./scanner.sh in the directory,it will display all the commands and options that you can use)
