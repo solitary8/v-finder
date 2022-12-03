@@ -13,4 +13,4 @@ usage options (find more info if you type ./scanner.sh in the directory,it will 
 ./scanner.sh [options] [IP]\
 Have fun and have a nice day :)!!!
 ## CREDITS  
-@Sheryar
+@sheryar
