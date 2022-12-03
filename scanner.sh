@@ -1,7 +1,7 @@
 #!/bin/bash
 #This is the part that displays all the options and usage examples
 if [ -z "$@" ]; then
-    echo "Usage: ./scanner.sh [options] [IP]"
+    echo "Usage: ./v-finder.sh [options] [IP]"
     echo "options:"
 echo "-sn: Ping Scan - disable port scan and thus,be faster!"
 echo "-Pn: Treat all hosts as online -- skip host discovery,this will be a slower ping but with more information"
@@ -12,17 +12,17 @@ echo "-sV: Probe open ports to determine service/version info,if you wanna know 
 echo "-O: With this you will know the OS of the device you scanned"
 echo "-6: enable IPv6 scanning !"
 echo "examples : "
-echo "./scanner.sh -sn 10.3.61.250"
-echo "./scanner.sh -Pn 10.3.61.250"
-echo "./scanner.sh -sS 10.3.61.250"
-echo "./scanner.sh -F 10.3.61.250"
-echo "./scanner.sh -sV 10.3.61.250"
-echo "./scanner.sh -O 10.3.61.250"
-echo "./scanner.sh -6 [IPv6 address]"
+echo "./v-finder.sh -sn 10.3.61.250"
+echo "./v-finder.sh -Pn 10.3.61.250"
+echo "./v-finder.sh -sS 10.3.61.250"
+echo "./v-finder.sh -F 10.3.61.250"
+echo "./v-finder.sh -sV 10.3.61.250"
+echo "./v-finder.sh -O 10.3.61.250"
+echo "./v-finder.sh -6 [IPv6 address]"
 
 
 
-    echo "Example would be ./scanner.sh 10.3.61.250"
+    echo "Example would be ./v-finder.sh 10.3.61.250"
 fi
 #This is the IP and no options part
 if [[ ! -z "$@" ]] ; then
@@ -30,13 +30,3 @@ if [[ ! -z "$@" ]] ; then
     echo "Scan has started"
     echo "Wait a minute I gotta find the open ports :)"
     sudo nmap "$@"
-fi
-#This is the double scan part of the script
-if [[ ! -z "$1" ]] 
-then
-    echo "Initiating double option scan"
-    echo "Scan has started !"
-    echo "Finding open ports"
-    sudo nmap "$1" "$@"
-fi
-#projects : support the -p option,add more options
