@@ -11,7 +11,7 @@ if [[ "$OSTYPE" == "darwin" ]]; then
     brew install nmap
     port install nmap
 fi
-chmod +x scanner.sh
+chmod +x v-finder.sh
 echo 'The setup is finished,enjoy my scanner :)'
 echo "Don't do anything illegal with it though :("
 
