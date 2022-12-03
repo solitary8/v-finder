@@ -12,3 +12,5 @@ Steps for setup
 usage options (find more info if you type ./scanner.sh in the directory,it will display all the commands and options that you can use)\
 ./scanner.sh [options] [IP]\
 Have fun and have a nice day :)!!!
+## CREDITS  
+@Sheryar
