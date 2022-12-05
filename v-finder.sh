@@ -1,6 +1,6 @@
 #!/bin/bash
 if [ -z "$*" ]; then
-    echo "Usage: ./scanner.sh [options] [IP]"
+    echo "Usage: ./v-finder.sh [options] [IP]"
     echo "options:"
     echo "-sn: Ping Scan - disable port scan and thus,be faster!" | pv -qL 40
     echo "-Pn: Treat all hosts as online -- skip host discovery,this will be a slower ping but with more information" | pv -qL 40
@@ -19,7 +19,7 @@ if [ -z "$*" ]; then
     echo "./scanner.sh -sV 10.3.61.250" | pv -qL 40
     echo "./scanner.sh -O 10.3.61.250" | pv -qL 40
     echo "./scanner.sh -6 [IPv6 address]" | pv -qL 40
-    echo "Example would be ./scanner.sh 10.3.61.250" | pv -qL 40
+    echo "Example would be ./v-finder.sh 10.3.61.250" | pv -qL 40
 fi
 if [[ ! -z "$*" ]] ; then
     echo "Initiating the scan" | pv -qL 10
