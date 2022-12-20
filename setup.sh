@@ -12,7 +12,7 @@ sudo dnf install pv nmap
 elif [[ "$distro" == Manjaro* ]]; then
 sudo pacman -S pv nmap
 fi
-chmod +x v-finder.sh
+chmod +x v-finder2.1.sh
 echo 'The setup is finished,enjoy my scanner :)' | pv -qL 40 
 echo "Don't do anything illegal with it though :(" | pv -qL 40 
 
