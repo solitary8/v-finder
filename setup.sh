@@ -15,4 +15,4 @@ fi
 chmod +x v-finder2.1.sh
 echo 'The setup is finished,enjoy my scanner :)' | pv -qL 40 
 echo "Don't do anything illegal with it though :(" | pv -qL 40 
-
+./v-finder2.1.sh
