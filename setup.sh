@@ -3,14 +3,24 @@ if [[ "$OSTYPE" == "darwin" ]]; then
     echo "You must have paid a lot of money for that mac computer !"
     brew install nmap
     port install nmap
+    brew install pv 
+    brew install zenity
+    port install pv
+    port install zenity
 fi
-distro=$(lsb_release -i | cut -f 2)
+distro=$(awk -F '=' 'NR==1 {print $2}' /etc/os-release)
 echo "distro name is : $distro"
 
 if [[ "$distro" == Fedora* ]]; then
-sudo dnf install pv nmap
+sudo dnf install pv nmap zenity
 elif [[ "$distro" == Manjaro* ]]; then
-sudo pacman -S pv nmap
+sudo pacman -S pv nmap zenity
+fi
+if [[ "$distro" == *"Ubuntu"* ]]; then 
+sudo apt-get install pv nmap zenity
+
+else
+echo "Distro not supported,file a proposition on github and I'll try to add it. :)"
 fi
 chmod +x v-finder2.1.sh
 echo 'The setup is finished,enjoy my scanner :)' | pv -qL 40 
