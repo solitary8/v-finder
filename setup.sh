@@ -7,17 +7,19 @@ if [[ "$OSTYPE" == "darwin" ]]; then
     brew install zenity
     port install pv
     port install zenity
+    brew install figlet
+    port install figlet
 fi
 distro=$(awk -F '=' 'NR==1 {print $2}' /etc/os-release)
 echo "distro name is : $distro"
 
 if [[ "$distro" == Fedora* ]]; then
-sudo dnf install pv nmap zenity
+sudo dnf install pv nmap zenity figlet
 elif [[ "$distro" == Manjaro* ]]; then
-sudo pacman -S pv nmap zenity
+sudo pacman -S pv nmap zenity figlet
 fi
 if [[ "$distro" == *"Ubuntu"* ]]; then 
-sudo apt-get install pv nmap zenity
+sudo apt-get install pv nmap zenity figlet
 
 else
 echo "Distro not supported,file a proposition on github and I'll try to add it. :)"
