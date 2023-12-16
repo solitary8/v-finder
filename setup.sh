@@ -19,12 +19,16 @@ elif [[ "$distro" == Manjaro* ]]; then
 sudo pacman -S pv nmap zenity figlet
 fi
 if [[ "$distro" == *"Ubuntu"* ]]; then 
+sudo apt-get upgrade
 sudo apt-get install pv nmap zenity figlet
 
 else
 echo "Distro not supported,file a proposition on github and I'll try to add it. :)"
 fi
-chmod +x v-finder2.1.sh
+if [[ "$distro" == *"Kali GNU/Linux Rolling"* ]]; then
+sudo apt-get upgrade
+sudo apt-get install pv nmap figlet zenity
+chmod +x v-finder2.2.sh
 echo 'The setup is finished,enjoy my scanner :)' | pv -qL 40 
 echo "Don't do anything illegal with it though :(" | pv -qL 40 
-./v-finder2.1.sh
+./v-finder2.2.sh
