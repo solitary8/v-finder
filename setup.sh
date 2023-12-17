@@ -22,7 +22,7 @@ if [[ "$distro" == *"Ubuntu"* ]]; then
 sudo apt-get upgrade
 sudo apt-get install pv nmap zenity figlet
 
-else if [[ "$distro" != *"Ubuntu"* or *"Fedora"* or *"darwin"* or *"Kali GNU/Linux Rolling"* ]]; then 
+else if [[ "$distro" != *"Ubuntu"* && *"Fedora"* && *"darwin"* && *"Kali GNU/Linux Rolling"* ]]; then 
 echo "Distro not supported,file a proposition on github and I'll try to add it. :)"
 fi
 if [[ "$distro" == *"Kali GNU/Linux Rolling"* ]]; then
