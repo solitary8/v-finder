@@ -9,25 +9,27 @@ if [[ "$OSTYPE" == "darwin" ]]; then
     port install zenity
     brew install figlet
     port install figlet
+    brew install lolcat
+    port install lolcat 
 fi
 distro=$(awk -F '=' 'NR==1 {print $2}' /etc/os-release)
 echo "distro name is : $distro"
 
 if [[ "$distro" == Fedora* ]]; then
-sudo dnf install pv nmap zenity figlet
+sudo dnf install pv nmap zenity figlet lolcat
 elif [[ "$distro" == Manjaro* ]]; then
-sudo pacman -S pv nmap zenity figlet
+sudo pacman -S pv nmap zenity figlet lolcat
 fi
 if [[ "$distro" == *"Ubuntu"* ]]; then 
 sudo apt-get upgrade
-sudo apt-get install pv nmap zenity figlet
+sudo apt-get install pv nmap zenity figlet lolcat
 
 else if [[ "$distro" != *"Ubuntu"* && *"Fedora"* && *"darwin"* && *"Kali GNU/Linux Rolling"* ]]; then 
 echo "Distro not supported,file a proposition on github and I'll try to add it. :)"
 fi
 if [[ "$distro" == *"Kali GNU/Linux Rolling"* ]]; then
 sudo apt-get upgrade
-sudo apt-get install pv nmap figlet zenity
+sudo apt-get install pv nmap figlet zenity lolcat
 fi
 chmod +x v-finder2.2.sh
 echo 'The setup is finished,enjoy my scanner :)' | pv -qL 40 
