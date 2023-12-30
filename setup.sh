@@ -31,7 +31,7 @@ if [[ "$distro" == *"Kali GNU/Linux Rolling"* ]]; then
 sudo apt-get upgrade
 sudo apt-get install pv nmap figlet zenity lolcat
 fi
-chmod +x v-finder2.2.sh
+chmod +x v-finder2.3.sh
 echo 'The setup is finished,enjoy my scanner :)' | pv -qL 40 
 echo "Don't do anything illegal with it though :(" | pv -qL 40 
-./v-finder2.2.sh
+./v-finder2.3.sh
