@@ -1,5 +1,5 @@
 # v-finder
-## V-finder is a script coded in bash using nmap   
+## V-finder is a script mainly coded in bash using nmap   
 This program will enable you to find vulnerabilities in any system  
 You can use any of the nmap options.This proram is only available for Linux (Ubuntu,Debian,Fedora and Manjaro)   
 I decided to make this scanner because I wanted people to have an easy to use and simple scanner only requiring the user to input the ip and options and to make less complicated to install,setup and for scanning this tool will become better,it is already simpler than nmap,all you have to do is execute the script and enter the IP and options when asked \
