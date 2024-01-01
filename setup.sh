@@ -4,20 +4,20 @@
 if [[ "$OSTYPE" == "darwin"* ]]; then
     echo "You must have paid a lot of money for that Mac computer!"
     # Install required packages for macOS
-    brew install nmap pv zenity figlet lolcat
-    port install nmap pv zenity figlet lolcat
+    brew install nmap pv zenity figlet lolcat xdotool
+    port install nmap pv zenity figlet lolcat xdotool
 else
     # Parse the distribution name from /etc/os-release
     distro=$(awk -F '=' '/^NAME/{gsub(/"/,"",$2); print $2}' /etc/os-release)
     echo "Distribution name is: $distro"
 
     if [[ "$distro" == *"Fedora"* ]]; then
-        sudo dnf install -y pv nmap zenity figlet lolcat
+        sudo dnf install -y pv nmap zenity figlet lolcat xdotool
     elif [[ "$distro" == *"Manjaro"* ]]; then
-        sudo pacman -S --noconfirm pv nmap zenity figlet lolcat
+        sudo pacman -S --noconfirm pv nmap zenity figlet lolcat xdotool
     elif [[ "$distro" == *"Ubuntu"* || "$distro" == *"Debian"* || "$distro" == *"Kali GNU/Linux"* ]]; then
         sudo apt-get update
-        sudo apt-get install -y pv nmap zenity figlet lolcat
+        sudo apt-get install -y pv nmap zenity figlet lolcat xdotool
     else
         echo "Distribution not supported. File a proposition on GitHub and I'll try to add it :)"
     fi
