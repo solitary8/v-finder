@@ -31,7 +31,7 @@ function ending_phrase_file() {
 
 function ending_phrase() {
 	echo "Your scan is finished and your results should have been outputed to you right now,if they don't open an issue on github and I will fix it." | pv -qL 40
-	echo "Don't hesitate to leave feedback on github at https://github.com/soliary8/v-finder :) ." | pv -qL 40
+	echo "Don't hesitate to leave feedback on github at https://github.com/solitary8/v-finder :) ." | pv -qL 40
 }
 
 
