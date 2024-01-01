@@ -1,37 +1,31 @@
 #!/bin/bash
-if [[ "$OSTYPE" == "darwin" ]]; then
-    echo "You must have paid a lot of money for that mac computer !"
-    brew install nmap
-    port install nmap
-    brew install pv 
-    brew install zenity
-    port install pv
-    port install zenity
-    brew install figlet
-    port install figlet
-    brew install lolcat
-    port install lolcat 
-fi
-distro=$(awk -F '=' 'NR==1 {print $2}' /etc/os-release)
-echo "distro name is : $distro"
 
-if [[ "$distro" == Fedora* ]]; then
-sudo dnf install pv nmap zenity figlet lolcat
-elif [[ "$distro" == Manjaro* ]]; then
-sudo pacman -S pv nmap zenity figlet lolcat
-fi
-if [[ "$distro" == *"Ubuntu"* ]]; then 
-sudo apt-get upgrade
-sudo apt-get install pv nmap zenity figlet lolcat
+# Check the OS type
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    echo "You must have paid a lot of money for that Mac computer!"
+    # Install required packages for macOS
+    brew install nmap pv zenity figlet lolcat
+    port install nmap pv zenity figlet lolcat
+else
+    # Parse the distribution name from /etc/os-release
+    distro=$(awk -F '=' '/^NAME/{gsub(/"/,"",$2); print $2}' /etc/os-release)
+    echo "Distribution name is: $distro"
 
-else if [[ "$distro" != *"Ubuntu"* && *"Fedora"* && *"darwin"* && *"Kali GNU/Linux Rolling"* ]]; then 
-echo "Distro not supported,file a proposition on github and I'll try to add it. :)"
+    if [[ "$distro" == *"Fedora"* ]]; then
+        sudo dnf install -y pv nmap zenity figlet lolcat
+    elif [[ "$distro" == *"Manjaro"* ]]; then
+        sudo pacman -S --noconfirm pv nmap zenity figlet lolcat
+    elif [[ "$distro" == *"Ubuntu"* || "$distro" == *"Debian"* || "$distro" == *"Kali GNU/Linux"* ]]; then
+        sudo apt-get update
+        sudo apt-get install -y pv nmap zenity figlet lolcat
+    else
+        echo "Distribution not supported. File a proposition on GitHub and I'll try to add it :)"
+    fi
 fi
-if [[ "$distro" == *"Kali GNU/Linux Rolling"* ]]; then
-sudo apt-get upgrade
-sudo apt-get install pv nmap figlet zenity lolcat
-fi
+
+# Remaining part of your script
 chmod +x v-finder2.3.sh
-echo 'The setup is finished,enjoy my scanner :)' | pv -qL 40 
-echo "Don't do anything illegal with it though :(" | pv -qL 40 
+echo 'The setup is finished, enjoy my scanner :)' | pv -qL 40 
+echo "Don't do anything illegal with it though :(" | pv -qL 40
 ./v-finder2.3.sh
+
