@@ -24,8 +24,8 @@ else
 fi
 
 # Remaining part of your script
-chmod +x v-finder2.3.sh
+chmod +x v-finder2.4.sh
 echo 'The setup is finished, enjoy my scanner :)' | pv -qL 40 
 echo "Don't do anything illegal with it though :(" | pv -qL 40
-./v-finder2.3.sh
+./v-finder2.4.sh
 
