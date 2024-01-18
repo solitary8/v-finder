@@ -6,26 +6,28 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     # Install required packages for macOS
     brew install nmap pv zenity figlet lolcat xdotool
     port install nmap pv zenity figlet lolcat xdotool
+    port install python3-customtkinter
 else
     # Parse the distribution name from /etc/os-release
     distro=$(awk -F '=' '/^NAME/{gsub(/"/,"",$2); print $2}' /etc/os-release)
     echo "Distribution name is: $distro"
 
     if [[ "$distro" == *"Fedora"* ]]; then
-        sudo dnf install -y pv nmap zenity figlet lolcat xdotool
+        sudo dnf install -y python3-customtkinter pv nmap zenity  xdotool
+        
     elif [[ "$distro" == *"Manjaro"* ]]; then
-        sudo pacman -S --noconfirm pv nmap zenity figlet lolcat xdotool
+        sudo pacman -S --noconfirm python3-customtkinter pv nmap zenity xdotool
     elif [[ "$distro" == *"Ubuntu"* || "$distro" == *"Debian"* || "$distro" == *"Kali GNU/Linux"* ]]; then
         sudo apt-get update
-        sudo apt-get install -y pv nmap zenity figlet lolcat xdotool
+        sudo apt-get install -y python3-customtkinter pv nmap zenity figlet lolcat xdotool
     else
         echo "Distribution not supported. File a proposition on GitHub and I'll try to add it :)"
     fi
 fi
 
 # Remaining part of your script
-chmod +x v-finder2.4.sh
+
 echo 'The setup is finished, enjoy my scanner :)' | pv -qL 40 
 echo "Don't do anything illegal with it though :(" | pv -qL 40
-./v-finder2.4.sh
+python3 v-finder3.0.py
 
