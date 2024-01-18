@@ -6,20 +6,20 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     # Install required packages for macOS
     brew install nmap pv zenity figlet lolcat xdotool
     port install nmap pv zenity figlet lolcat xdotool
-    port install python3-customtkinter
+    port install python3-customtkinter python3-virtualvenv
 else
     # Parse the distribution name from /etc/os-release
     distro=$(awk -F '=' '/^NAME/{gsub(/"/,"",$2); print $2}' /etc/os-release)
     echo "Distribution name is: $distro"
 
     if [[ "$distro" == *"Fedora"* ]]; then
-        sudo dnf install -y python3-customtkinter pv nmap zenity  xdotool
+        sudo dnf install -y python3-customtkinter pv nmap zenity  xdotool python3-virtualvenv
         
     elif [[ "$distro" == *"Manjaro"* ]]; then
-        sudo pacman -S --noconfirm python3-customtkinter pv nmap zenity xdotool
+        sudo pacman -S --noconfirm python3-customtkinter pv nmap zenity xdotool python3-virtualvenv
     elif [[ "$distro" == *"Ubuntu"* || "$distro" == *"Debian"* || "$distro" == *"Kali GNU/Linux"* ]]; then
         sudo apt-get update
-        sudo apt-get install -y python3-customtkinter pv nmap zenity figlet lolcat xdotool
+        sudo apt-get install -y python3-customtkinter pv nmap zenity figlet lolcat xdotool python3-virtualvenv
     else
         echo "Distribution not supported. File a proposition on GitHub and I'll try to add it :)"
     fi
