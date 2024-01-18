@@ -10,7 +10,6 @@ Steps for setup
 ``cd v-finder``\
 ``chmod +x setup.sh``\
 ``./setup.sh`` or ``bash setup.sh``\
-usage options (find more info if you type ./v-finder2.3.sh -h in the directory,it will display all the commands and options that you can use)\
 Have fun and have a nice day :)!!!
 ## CREDITS  
 @sheryar  
