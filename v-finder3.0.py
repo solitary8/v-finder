@@ -16,7 +16,6 @@
 #customisation would be :
 #scan 1 : basic options : scan2 : user would be able to change the options etc. with all options
 
-
 import tkinter as tk 
 import customtkinter
 import subprocess
@@ -24,7 +23,7 @@ import time
 import threading 
 root = customtkinter.CTk()
 root.title("V-finder")
-
+subprocess.run('source','.venv.sh', shell=False)
 #Definition of frame
 
 #quit tool function
