@@ -1,6 +1,5 @@
 #!/bin/bash
 python -m venv vfinder
-subprocess.Popen(['lxterminal', '-e', 'source', '.venv.sh'])
 # Check the OS type
 if [[ "$OSTYPE" == "darwin"* ]]; then
     echo "You must have paid a lot of money for that Mac computer!"
