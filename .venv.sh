@@ -1,3 +1,3 @@
 #!/bin/bash
 
-source ./v-finder/bin/activate
+source ./vfinder/bin/activate
