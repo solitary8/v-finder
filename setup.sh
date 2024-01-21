@@ -5,7 +5,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     # Install required packages for macOS
     brew install nmap pv zenity figlet lolcat xdotool
     port install nmap pv zenity figlet lolcat xdotool
-    pip install virtualvenv customtkinter
+    pip install customtkinter
 else
     # Parse the distribution name from /etc/os-release
     distro=$(awk -F '=' '/^NAME/{gsub(/"/,"",$2); print $2}' /etc/os-release)
