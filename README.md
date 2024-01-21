@@ -8,6 +8,7 @@ I thank nmap for making this amazing tool and people on discord who helped me wi
 DISCLAIMER : THIS TOOL IS NOT FOR FINDING VULNERABILITIES IN A SYSTEM AND THEN USING THESE VULNERAILITIES TO GAIN ACCESS TO THE SYSTEM WITHOUT AUTHORIZATION,THIS IS ILLEGAL,ONLY HACK DEVICES WHICH YOU OWN OR HAVE PERMISSION TO HACK,I WILL NOT BE HELD RESPONSIBLE IF YOU GET ARRESTED\
 Steps for setup   
 ``git clone https://github.com/solitary8/v-finder
+
 ``\
 `` python -m venv vfinder`` it's to make a venv because on some distros like raspberry pi OS there's isn't the customtkinter library\
 `` source ./vfinder/bin/activate`` It's to login into your venv (virtual environment) if you ever want to log out run ``deactivate``\
