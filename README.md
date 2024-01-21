@@ -10,6 +10,7 @@ Steps for setup
 ``git clone https://github.com/solitary8/v-finder``\
 `` python -m venv vfinder`` it's to make a venv because on some distros like raspberry pi OS there's isn't the customtkinter library\
 `` source ./vfinder/bin/activate`` It's to login into your venv (virtual environment) if you ever want to log out run ``deactivate``\
+``pip install customtkinter``\
 ``cd v-finder``\
 ``chmod +x setup.sh``\
 ``./setup.sh`` or ``bash setup.sh``\
