@@ -1,5 +1,5 @@
 #!/bin/bash
-python -m venv v-finder 
+python -m venv vfinder
 source .venv.sh
 # Check the OS type
 if [[ "$OSTYPE" == "darwin"* ]]; then
