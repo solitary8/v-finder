@@ -1,4 +1,4 @@
-# v-finder
+# V-FINDER
 ## V-finder is a script mainly coded in python and a bit of bash using nmap  
 ### PLEASE FOLLOW THE STEPS FOR SETUP BECAUSE OTHERWISE IT WILL NOT WORK ON SOME DISTROS
 This program will enable you to find vulnerabilities in any system  
