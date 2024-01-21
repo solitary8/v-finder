@@ -1,5 +1,6 @@
 #!/bin/bash
-
+python -m venv v-finder 
+source .venv.sh
 # Check the OS type
 if [[ "$OSTYPE" == "darwin"* ]]; then
     echo "You must have paid a lot of money for that Mac computer!"
@@ -26,8 +27,6 @@ else
 fi
 
 # Remaining part of your script
-python -m venv v-finder 
-source ./v-finder/bin/activate
 echo 'The setup is finished, enjoy my scanner :)' | pv -qL 40 
 echo "Don't do anything illegal with it though :(" | pv -qL 40
 python3 v-finder3.0.py
