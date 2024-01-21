@@ -1,25 +1,28 @@
 #!/bin/bash
-python -m venv vfinder
 # Check the OS type
 if [[ "$OSTYPE" == "darwin"* ]]; then
     echo "You must have paid a lot of money for that Mac computer!"
     # Install required packages for macOS
     brew install nmap pv zenity figlet lolcat xdotool
     port install nmap pv zenity figlet lolcat xdotool
-    port install python3-customtkinter python3-virtualvenv
+    pip install virtualvenv customtkinter
 else
     # Parse the distribution name from /etc/os-release
     distro=$(awk -F '=' '/^NAME/{gsub(/"/,"",$2); print $2}' /etc/os-release)
     echo "Distribution name is: $distro"
 
     if [[ "$distro" == *"Fedora"* ]]; then
-        sudo dnf install -y python3-customtkinter pv nmap zenity  xdotool python3-virtualvenv
+        sudo dnf install -y  pv nmap zenity  xdotool 
+        pip install virtualvenv customtkinter
         
     elif [[ "$distro" == *"Manjaro"* ]]; then
-        sudo pacman -S --noconfirm python3-customtkinter pv nmap zenity xdotool python3-virtualvenv
+        sudo pacman -S --noconfirm  pv nmap zenity xdotool 
+        pip install virtualvenv customtkinter
+        
     elif [[ "$distro" == *"Ubuntu"* || "$distro" == *"Debian"* || "$distro" == *"Kali GNU/Linux"* ]]; then
         sudo apt-get update
-        sudo apt-get install -y python3-customtkinter pv nmap zenity figlet lolcat xdotool python3-virtualvenv
+        sudo apt-get install -y  pv nmap zenity figlet lolcat xdotool 
+        pip install virtualvenv customtkinter
     else
         echo "Distribution not supported. File a proposition on GitHub and I'll try to add it :)"
     fi
