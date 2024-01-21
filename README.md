@@ -13,6 +13,7 @@ Steps for setup
 ``cd v-finder``\
 ``chmod +x setup.sh``\
 ``./setup.sh`` or ``bash setup.sh``\
+Run ``python3 v-finder3.0.py`` once you're logged in your venv\
 Have fun and have a nice day :)!!!
 ## CREDITS  
 @sheryar  
