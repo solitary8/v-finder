@@ -23,7 +23,7 @@ import time
 import threading 
 root = customtkinter.CTk()
 root.title("V-finder")
-subprocess.run('source','.venv.sh', shell=False)
+subprocess.Popen(['lxterminal', '-e', '/bin/bash', '-c', 'source .venv.sh && your_command_here'])
 #Definition of frame
 
 #quit tool function
