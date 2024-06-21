@@ -49,7 +49,8 @@ def distro():
         terminal_command = f'xterm -e bash -c"{command}; read -p \'Press Enter to close...\'"'
         subprocess.Popen(terminal_command, shell=True)
 
-    elif "Kali" or "Fedora" in result.stdout.strip():
+    _distro = result.stdout.strip()
+    if "Kali" in _distro or "Fedora" in _distro:
         command = f'sudo nmap {text} -oN results.txt'
         terminal_command = f'gnome-terminal -- bash -c"{command}; read -p \'Press Enter to close...\'"'
         subprocess.Popen(terminal_command, shell=True)
